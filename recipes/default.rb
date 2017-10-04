@@ -12,7 +12,7 @@ package 'apt-transport-https'
 # Install Passenger repository
 apt_repository 'passenger' do
   uri 'https://oss-binaries.phusionpassenger.com/apt/passenger'
-  distribution node['platform_version']
+  distribution node['lsb']['codename']
   components ['main']
   keyserver 'hkp://keyserver.ubuntu.com:80'
   key '561F9B9CAC40B2F7'
